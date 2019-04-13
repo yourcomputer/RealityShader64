@@ -267,17 +267,6 @@ Shader "Reality Shader 64" {
 				fixed4 overlayTex;
 				
 				// scroll the uv of the overlay texture
-				/*
-				#if _UV_MAINTEX
-				if (_ScrollSpeedX != 0 || _ScrollSpeedY != 0) {
-					i.overlayUV.xy -= frac(_Time.x * float2((_ScrollSpeedX * _OverlayTex_ST.x), (_ScrollSpeedY * _OverlayTex_ST.y)));
-				}
-				#else
-				if (_ScrollSpeedX != 0 || _ScrollSpeedY != 0) {
-					i.overlayUV.xy -= frac(_Time.x * float2(_ScrollSpeedX , _ScrollSpeedY));
-				}
-				#endif
-				*/
 				if (_ScrollSpeedX != 0 || _ScrollSpeedY != 0) {
 					i.overlayUV.xy -= frac(_Time.x * float2(_ScrollSpeedX, _ScrollSpeedY));
 				}
